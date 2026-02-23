@@ -3,3 +3,4 @@ fly.toml
 env
 .venv
 dataframes
+.DS_Store

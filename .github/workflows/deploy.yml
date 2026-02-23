@@ -7,6 +7,7 @@ on:
     paths:
       - "app/**"
       - "fly.toml"
+      - "dockerfile"
 
 jobs:
   deploy:

@@ -6,9 +6,6 @@
 app = "track-stocks"
 primary_region = "ewr"
 
-[build]
-  builder = "paketobuildpacks/builder:full"
-
 [env]
   PORT = "8080"
 

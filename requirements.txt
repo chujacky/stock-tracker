@@ -1,0 +1,7 @@
+flask
+pandas
+yfinance
+jinja2
+gunicorn
+pymongo
+APScheduler

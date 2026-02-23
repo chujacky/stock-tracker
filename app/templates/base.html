@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script src="{{url_for('static', filename='nav.js')}}"></script>
+    {% block javascript %}
+    {% endblock %}
+</head>
+
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item {% if request.path == '/' %}is-active{% endif %}" href="{{ '/' }}">
+                    Home
+                </a>
+
+                <a class="navbar-item {% if request.path == '/add' %}is-active{% endif %}" href="{{ '/add' }}">
+                    Add Stocks
+                </a>
+            </div>
+        </div>
+    </nav>
+    {% block main %}
+    {% endblock %}
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                Created by <a href="https://github.com/chujacky">Jacky Chu</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

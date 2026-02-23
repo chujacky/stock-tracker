@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block javascript %}
+<script src="{{url_for('static', filename='home.js')}}"></script>
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    <div class="container loader-container">
+        <div class="loader"></div>
+    </div>
+    <div class="container table-container">
+        <div class="level mb-5">
+            <div class="level-left">
+                <p class="level-item last-update">last updated at {{ last_update }}</p>
+                <p class="level-item control">
+                    <a class="button is-primary" href="/?refresh=1">
+                        Refresh
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="table-wrapper has-mobile-cards"></div>
+    </div>
+</div>
+{% endblock %}
